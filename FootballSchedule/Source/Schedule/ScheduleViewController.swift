@@ -1,6 +1,6 @@
 //
 //  ScheduleViewController.swift
-//  Football Schedule
+//  FootballSchedule
 //
 //  Created by Tony Albor on 1/19/19.
 //  Copyright © 2019 Tony Albor. All rights reserved.
@@ -24,7 +24,9 @@ class ScheduleViewController: UIViewController {
     override func loadView() {
         view = ScheduleView()
     }
-    var contentView: ScheduleView { return view as! ScheduleView }
+    var contentView: ScheduleView {
+        return view as! ScheduleView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +69,5 @@ extension ScheduleViewController: UITableViewDataSource {
 }
 
 extension ScheduleViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+
 }

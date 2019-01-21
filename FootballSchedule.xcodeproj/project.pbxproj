@@ -135,10 +135,10 @@
 		EA19D0A521F5427E00602823 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EA19D0A621F5429D00602823 /* Standings */,
 				EA19D07A21EB2C6900602823 /* AppDelegate.swift */,
 				EA19D09821F4160400602823 /* HomeViewController.swift */,
 				EA19D07C21EB2C6900602823 /* ViewController.swift */,
+				EA19D0A621F5429D00602823 /* Standings */,
 				EA19D0A421F5425C00602823 /* Schedule */,
 				EA19D0A321F5424A00602823 /* Protocols */,
 				EA19D0A221F5422600602823 /* Network */,

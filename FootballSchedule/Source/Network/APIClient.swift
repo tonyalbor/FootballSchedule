@@ -1,6 +1,6 @@
 //
 //  APIClient.swift
-//  Football Schedule
+//  FootballSchedule
 //
 //  Created by Tony Albor on 1/13/19.
 //  Copyright © 2019 Tony Albor. All rights reserved.
