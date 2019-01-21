@@ -8,31 +8,12 @@
 
 import UIKit
 
-class ScheduleContext {
-
-    private let api = APIClient<EPLScheduleResponse>()
-    private(set) var matches = [Match]()
-    
-    func getMatches(completion: @escaping (Result<[Match]>) -> Void) {
-        let request = EPLScheduleRequest(matchday: 23) // todo: paginate; matchday param
-        api.request(request) { [weak self] result in
-            switch result {
-            case let .success(response):
-                self?.matches = response.matches
-                completion(.success(response.matches))
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
-    }
-}
-
 class ScheduleViewController: UIViewController {
     
-    private let context: ScheduleContext
+    private let schedule: ScheduleAPI
     
-    init(context: ScheduleContext) {
-        self.context = context
+    init(schedule: ScheduleAPI) {
+        self.schedule = schedule
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,18 +28,18 @@ class ScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTableView()
+        setUpSchedule()
         getSchedule()
     }
     
-    private func setUpTableView() {
+    private func setUpSchedule() {
         contentView.matches.dataSource = self
         contentView.matches.delegate = self
         contentView.matches.estimatedRowHeight = 100.0
     }
     
     private func getSchedule() {
-        context.getMatches { [weak self] result in
+        schedule.getMatches { [weak self] result in
             DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .success:
@@ -75,12 +56,12 @@ class ScheduleViewController: UIViewController {
 extension ScheduleViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return context.matches.count
+        return schedule.matches.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MatchTableViewCell.self)
-        cell.match = context.matches[indexPath.row]
+        cell.match = schedule.matches[indexPath.row]
         return cell
     }
 }

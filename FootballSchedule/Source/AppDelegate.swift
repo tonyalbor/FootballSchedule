@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let context = ScheduleContext()
-        let schedule = ScheduleViewController(context: context)
+        let context = ScheduleAPI()
+        let schedule = ScheduleViewController(schedule: context)
         
-        let standings = StandingsViewController(context: StandingsContext())
+        let standings = StandingsViewController(standings: StandingsAPI())
         window?.rootViewController = standings//ViewController()//schedule
         window?.makeKeyAndVisible()
         return true

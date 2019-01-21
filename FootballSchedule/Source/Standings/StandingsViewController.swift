@@ -8,32 +8,12 @@
 
 import UIKit
 
-class StandingsContext {
-    
-    private let api = APIClient<EPLStandingsResponse>()
-    private(set) var standings = [Standing]()
-    
-    func getStandings(completion: @escaping (Result<[Standing]>) -> Void) {
-        let request = EPLStandingsRequest()
-        api.request(request) { [weak self] result in
-            switch result {
-            case let .success(response):
-                let totalStandings = response.standings.first { $0.type == "TOTAL" }?.table ?? [] // error if total not found?
-                self?.standings = totalStandings
-                completion(.success(totalStandings))
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
-    }
-}
-
 class StandingsViewController: UIViewController {
     
-    private let context: StandingsContext
+    private let standings: StandingsAPI
     
-    init(context: StandingsContext) {
-        self.context = context
+    init(standings: StandingsAPI) {
+        self.standings = standings
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -61,7 +41,7 @@ class StandingsViewController: UIViewController {
     }
     
     private func getStandings() {
-        context.getStandings { [weak self] result in
+        standings.getTable { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
@@ -77,12 +57,12 @@ class StandingsViewController: UIViewController {
 extension StandingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return context.standings.count
+        return standings.table.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(StandingTableViewCell.self)
-        cell.standing = context.standings[indexPath.row]
+        cell.standing = standings.table[indexPath.row]
         return cell
     }
 }

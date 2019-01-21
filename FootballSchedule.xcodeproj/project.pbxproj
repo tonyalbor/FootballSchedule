@@ -28,6 +28,8 @@
 		EA5A62B521F54975009CA336 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B421F54975009CA336 /* StandingsViewController.swift */; };
 		EA5A62B721F54B19009CA336 /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B621F54B19009CA336 /* StandingsView.swift */; };
 		EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */; };
+		EA5A62BB21F56432009CA336 /* ScheduleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */; };
+		EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		EA5A62B421F54975009CA336 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		EA5A62B621F54B19009CA336 /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
 		EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTableViewCell.swift; sourceTree = "<group>"; };
+		EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPI.swift; sourceTree = "<group>"; };
+		EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */,
 				EA19D08E21F3EBAB00602823 /* Match.swift */,
 				EA19D0A721F542E400602823 /* EPLScheduleRequest.swift */,
+				EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			children = (
 				EA19D0A921F5435F00602823 /* EPLStandingsRequest.swift */,
 				EA5A62B421F54975009CA336 /* StandingsViewController.swift */,
+				EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */,
 				EA5A62B621F54B19009CA336 /* StandingsView.swift */,
 				EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */,
 			);
@@ -230,12 +236,14 @@
 				EA19D07D21EB2C6900602823 /* ViewController.swift in Sources */,
 				EA19D09721F411FB00602823 /* FootballDataAuthToken.swift in Sources */,
 				EA19D0AA21F5435F00602823 /* EPLStandingsRequest.swift in Sources */,
+				EA5A62BB21F56432009CA336 /* ScheduleAPI.swift in Sources */,
 				EA19D07B21EB2C6900602823 /* AppDelegate.swift in Sources */,
 				EA19D09521F3FC8A00602823 /* FootballDataRequest.swift in Sources */,
 				EA19D09B21F4165400602823 /* ScheduleViewController.swift in Sources */,
 				EA19D0A121F41BD800602823 /* Reusable.swift in Sources */,
 				EA19D09921F4160400602823 /* HomeViewController.swift in Sources */,
 				EA19D09F21F417FC00602823 /* MatchTableViewCell.swift in Sources */,
+				EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */,
 				EA19D08D21EB2C7B00602823 /* APIClient.swift in Sources */,
 				EA19D09121F3FC3B00602823 /* APIRequest.swift in Sources */,
 				EA19D09D21F4166F00602823 /* ScheduleView.swift in Sources */,
