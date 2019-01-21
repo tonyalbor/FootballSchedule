@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let client = APIClient<EPLScheduleResponse>()
+    let client = APIClient<EPLStandingsResponse>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        client.request(EPLScheduleRequest(matchday: 23)) { (result) in
+        client.request(EPLStandingsRequest()) { (result) in
             switch result {
-            case let .success(schedule):
-                print(schedule)
+            case let .success(standings):
+                print(standings)
             case let .failure(error):
                 print(error.localizedDescription)
             }

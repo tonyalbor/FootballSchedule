@@ -10,4 +10,8 @@ protocol FootballDataRequest: APIRequest {}
 
 extension FootballDataRequest {
     var baseUrlString: String { return "http://api.football-data.org/v2/" }
+    
+    var headers: [String : String] {
+        return ["X-Auth-Token": FootballDataAuthToken.app]
+    }
 }

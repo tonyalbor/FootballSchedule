@@ -24,6 +24,10 @@
 		EA19D09F21F417FC00602823 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */; };
 		EA19D0A121F41BD800602823 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D0A021F41BD800602823 /* Reusable.swift */; };
 		EA19D0A821F542E400602823 /* EPLScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D0A721F542E400602823 /* EPLScheduleRequest.swift */; };
+		EA19D0AA21F5435F00602823 /* EPLStandingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D0A921F5435F00602823 /* EPLStandingsRequest.swift */; };
+		EA5A62B521F54975009CA336 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B421F54975009CA336 /* StandingsViewController.swift */; };
+		EA5A62B721F54B19009CA336 /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B621F54B19009CA336 /* StandingsView.swift */; };
+		EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		EA19D0A021F41BD800602823 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		EA19D0A721F542E400602823 /* EPLScheduleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLScheduleRequest.swift; sourceTree = "<group>"; };
+		EA19D0A921F5435F00602823 /* EPLStandingsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPLStandingsRequest.swift; sourceTree = "<group>"; };
+		EA5A62B421F54975009CA336 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		EA5A62B621F54B19009CA336 /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
+		EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,10 @@
 		EA19D0A621F5429D00602823 /* Standings */ = {
 			isa = PBXGroup;
 			children = (
+				EA19D0A921F5435F00602823 /* EPLStandingsRequest.swift */,
+				EA5A62B421F54975009CA336 /* StandingsViewController.swift */,
+				EA5A62B621F54B19009CA336 /* StandingsView.swift */,
+				EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */,
 			);
 			path = Standings;
 			sourceTree = "<group>";
@@ -213,8 +225,11 @@
 			files = (
 				EA19D0A821F542E400602823 /* EPLScheduleRequest.swift in Sources */,
 				EA19D09321F3FC5700602823 /* Result.swift in Sources */,
+				EA5A62B521F54975009CA336 /* StandingsViewController.swift in Sources */,
+				EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */,
 				EA19D07D21EB2C6900602823 /* ViewController.swift in Sources */,
 				EA19D09721F411FB00602823 /* FootballDataAuthToken.swift in Sources */,
+				EA19D0AA21F5435F00602823 /* EPLStandingsRequest.swift in Sources */,
 				EA19D07B21EB2C6900602823 /* AppDelegate.swift in Sources */,
 				EA19D09521F3FC8A00602823 /* FootballDataRequest.swift in Sources */,
 				EA19D09B21F4165400602823 /* ScheduleViewController.swift in Sources */,
@@ -224,6 +239,7 @@
 				EA19D08D21EB2C7B00602823 /* APIClient.swift in Sources */,
 				EA19D09121F3FC3B00602823 /* APIRequest.swift in Sources */,
 				EA19D09D21F4166F00602823 /* ScheduleView.swift in Sources */,
+				EA5A62B721F54B19009CA336 /* StandingsView.swift in Sources */,
 				EA19D08F21F3EBAB00602823 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,11 @@ struct Competition: Codable, Equatable, Hashable {
     let name: String
 }
 
+struct Team: Codable, Equatable, Hashable {
+    let id: Int
+    let name: String
+}
+
 struct Match: Codable, Equatable, Hashable {
     struct Result: Codable, Equatable, Hashable {
         let awayTeam: Int?
@@ -30,10 +35,6 @@ struct Match: Codable, Equatable, Hashable {
         let winner: String?
         let extraTime: Result?
         let penalties: Result?
-    }
-    struct Team: Codable, Equatable, Hashable {
-        let id: Int
-        let name: String
     }
     let id: Int
     let homeTeam: Team

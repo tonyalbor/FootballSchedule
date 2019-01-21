@@ -55,7 +55,6 @@ class ScheduleViewController: UIViewController {
         contentView.matches.dataSource = self
         contentView.matches.delegate = self
         contentView.matches.estimatedRowHeight = 100.0
-//        contentView.matches.rowHeight = UITableView.automaticDimension
     }
     
     private func getSchedule() {

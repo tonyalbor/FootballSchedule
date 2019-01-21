@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let context = ScheduleContext()
         let schedule = ScheduleViewController(context: context)
-        window?.rootViewController = schedule
+        
+        let standings = StandingsViewController(context: StandingsContext())
+        window?.rootViewController = standings//ViewController()//schedule
         window?.makeKeyAndVisible()
         return true
     }
