@@ -10,11 +10,21 @@ import Foundation
 
 class StandingsAPI {
     
-    private let api = APIClient<EPLStandingsResponse>()
+    struct Request: FootballDataRequest {
+        var urlString: String { return "competitions/2021/standings" }
+    }
+    
+    struct Response: Codable, Equatable, Hashable {
+        let competition: Competition
+        let season: Season
+        let standings: [Standings] // [TOTAL, HOME, AWAY]
+    }
+    
+    private let api = APIClient<Response>()
     private(set) var table = [Standing]()
     
     func getTable(completion: @escaping (Result<[Standing]>) -> Void) {
-        let request = EPLStandingsRequest()
+        let request = Request()
         api.request(request) { [weak self] result in
             switch result {
             case let .success(response):

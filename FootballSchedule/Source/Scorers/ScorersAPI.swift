@@ -1,35 +1,37 @@
 //
-//  ScheduleAPI.swift
+//  ScorersAPI.swift
 //  FootballSchedule
 //
-//  Created by Tony Albor on 1/20/19.
+//  Created by Tony Albor on 1/27/19.
 //  Copyright © 2019 Tony Albor. All rights reserved.
 //
 
 import Foundation
 
-class ScheduleAPI {
+class ScorersAPI {
     
     struct Request: FootballDataRequest {
-        let matchday: Int
-        var urlString: String { return "competitions/PL/matches/?matchday=\(matchday)" }
+        let code: String
+        var urlString: String { return "competitions/\(code)/scorers" }
     }
     
     struct Response: Codable, Equatable, Hashable {
-        let matches: [Match]
         let competition: Competition
+        let season: Season
+        let scorers: [Scorer]
     }
     
     private let api = APIClient<Response>()
-    private(set) var matches = [Match]()
+    private(set) var scorers = [Scorer]()
     
-    func getMatches(completion: @escaping (Result<[Match]>) -> Void) {
-        let request = Request(matchday: 24) // todo: paginate; matchday param
+    func getScorers(competitionCode: String,
+                    completion: @escaping (Result<[Scorer]>) -> Void) {
+        let request = Request(code: competitionCode)
         api.request(request) { [weak self] result in
             switch result {
             case let .success(response):
-                self?.matches = response.matches
-                completion(.success(response.matches))
+                self?.scorers = response.scorers
+                completion(.success(response.scorers))
             case let .failure(error):
                 completion(.failure(error))
             }

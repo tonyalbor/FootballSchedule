@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let client = APIClient<EPLStandingsResponse>()
+    let client = APIClient<StandingsAPI.Response>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        client.request(EPLStandingsRequest()) { (result) in
+        client.request(StandingsAPI.Request()) { (result) in
             switch result {
             case let .success(standings):
                 print(standings)

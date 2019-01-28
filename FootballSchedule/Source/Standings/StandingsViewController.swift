@@ -68,5 +68,8 @@ extension StandingsViewController: UITableViewDataSource {
 }
 
 extension StandingsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let standing = standings.table[indexPath.row]
+        print(standing.team.name + " " + (standing.team.id.stringValue ?? "nil"))
+    }
 }

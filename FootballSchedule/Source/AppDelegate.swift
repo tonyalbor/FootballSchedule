@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let schedule = ScheduleViewController(schedule: context)
         
         let standings = StandingsViewController(standings: StandingsAPI())
-        window?.rootViewController = standings//ViewController()//schedule
+        let scorers = ScorersViewController(scorers: ScorersAPI())
+        window?.rootViewController = schedule//standings//ViewController()//schedule
         window?.makeKeyAndVisible()
         return true
     }

@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct APIClient<Entity: Decodable> {
+struct APIClient<Response: Decodable> {
     
     let session = URLSession.shared
     
-    func request(_ request: APIRequest, completion: @escaping (Result<Entity>) -> Void) {
+    func request(_ request: APIRequest, completion: @escaping (Result<Response>) -> Void) {
         let task = session.dataTask(with: request.asURLRequest()) { data, response, error in
             if let error = error {
                 completion(.failure(error))
@@ -27,7 +27,7 @@ struct APIClient<Entity: Decodable> {
                 return
             }
             do {
-                let entity = try JSONDecoder().decode(Entity.self, from: data)
+                let entity = try JSONDecoder().decode(Response.self, from: data)
                 completion(.success(entity))
             } catch let jsonError {
                 completion(.failure(jsonError))
