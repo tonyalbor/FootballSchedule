@@ -27,8 +27,8 @@ struct APIClient<Response: Decodable> {
                 return
             }
             do {
-                let entity = try JSONDecoder().decode(Response.self, from: data)
-                completion(.success(entity))
+                let response = try JSONDecoder().decode(Response.self, from: data)
+                completion(.success(response))
             } catch let jsonError {
                 completion(.failure(jsonError))
             }
