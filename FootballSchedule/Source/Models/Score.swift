@@ -9,7 +9,7 @@
 struct Score: Codable, Equatable, Hashable {
     let halfTime: MatchResult?
     let fullTime: MatchResult?
-    let winner: MatchResult?
+    let winner: String?
     let extraTime: MatchResult?
     let penalties: MatchResult?
 }
