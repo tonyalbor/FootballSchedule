@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let standings = StandingsViewController(standings: StandingsAPI())
         let scorers = ScorersViewController(scorers: ScorersAPI())
+        window?.backgroundColor = .white
         window?.rootViewController = scorers//standings//ViewController()//schedule
         window?.makeKeyAndVisible()
         return true
