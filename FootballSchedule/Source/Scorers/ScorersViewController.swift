@@ -21,15 +21,54 @@ class ScorersViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        view = ScorersView()
+    }
+    var contentView: ScorersView {
+        return view as! ScorersView
+    }
+    var tableView: UITableView {
+        return contentView.scorers
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        scorers.getScorers(competitionCode: "PL") { (result) in
-            switch result {
-            case let .success(noice):
-                print(noice)
-            case let .failure(error):
-                print(error)
+        setUpTableView()
+        getScorers()
+    }
+    
+    private func getScorers() {
+        scorers.getScorers(competitionCode: "PL") { [weak self] result in
+            DispatchQueue.main.async { [weak self] in
+                switch result {
+                case .success:
+                    self?.tableView.reloadData()
+                case let .failure(error):
+                    print(error) // TODO: show error
+                }
             }
         }
     }
+    
+    private func setUpTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
+
+extension ScorersViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return scorers.scorers.count // needs better naming
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(ScorerTableViewCell.self)
+        cell.update(scorer: scorers.scorers[indexPath.row], rank: indexPath.row + 1)
+        return cell
+    }
+}
+
+extension ScorersViewController: UITableViewDelegate {
+    
 }
