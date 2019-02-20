@@ -171,6 +171,7 @@ private let countryCodes = [
     "Comoros": "KM",
     "St. Kitts & Nevis": "KN",
     "North Korea": "KP",
+    "Korea Republic": "KR",
     "South Korea": "KR",
     "Kuwait": "KW",
     "Cayman Islands": "KY",
