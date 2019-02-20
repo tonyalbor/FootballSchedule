@@ -16,13 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let context = ScheduleAPI()
-        let schedule = ScheduleViewController(schedule: context)
-        
-        let standings = StandingsViewController(standings: StandingsAPI())
-        let scorers = ScorersViewController(scorers: ScorersAPI())
         window?.backgroundColor = .white
-        window?.rootViewController = scorers//standings//ViewController()//schedule
+        window?.rootViewController = HomeViewController()
         window?.makeKeyAndVisible()
         return true
     }
@@ -48,7 +43,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-

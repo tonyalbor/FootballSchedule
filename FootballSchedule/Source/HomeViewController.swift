@@ -9,6 +9,17 @@
 import UIKit
 
 class HomeViewController: UITabBarController {
+    
+    override func loadView() {
+        super.loadView()
+        let schedule = ScheduleViewController(schedule: ScheduleAPI())
+        let standings = StandingsViewController(standings: StandingsAPI())
+        let scorers = ScorersViewController(scorers: ScorersAPI())
+        schedule.title = "Schedule"
+        standings.title = "Standings"
+        scorers.title = "Top Scorers"
+        viewControllers = [schedule, standings, scorers]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
