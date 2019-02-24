@@ -11,4 +11,13 @@ import Foundation
 enum Result<Value> {
     case success(Value)
     case failure(Error)
+    
+    func map<MappedValue>(_ transform: (Value) -> MappedValue) -> Result<MappedValue> {
+        switch self {
+        case let .success(value):
+            return .success(transform(value))
+        case let .failure(error):
+            return .failure(error)
+        }
+    }
 }

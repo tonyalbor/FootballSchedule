@@ -10,9 +10,11 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
     
+    private let competitionCode: String
     private let schedule: ScheduleAPI
     
-    init(schedule: ScheduleAPI) {
+    init(competitionCode: String, schedule: ScheduleAPI) {
+        self.competitionCode = competitionCode
         self.schedule = schedule
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,7 +43,7 @@ class ScheduleViewController: UIViewController {
     }
     
     private func getSchedule() {
-        schedule.getMatches { [weak self] result in
+        schedule.getCurrentMatches(competitionCode: competitionCode) { [weak self] result in
             DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .success:
