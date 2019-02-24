@@ -14,7 +14,8 @@ class ScorerTableViewCell: UITableViewCell, Reusable {
         rank.text = rankPosition.stringValue
         nationality.text = scorer.player.emojiNationalityFlag()
         name.text = scorer.player.name
-//        team.text = eplTeams[scorer.team]
+        team.image = teamLogos[scorer.team.id]?.asUIImage()
+//        team.text = shortTeamNames[scorer.team.id]
         goals.text = scorer.numberOfGoals.stringValue
     }
     
@@ -34,11 +35,11 @@ class ScorerTableViewCell: UITableViewCell, Reusable {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-//    private(set) lazy var team: UILabel = { // TODO: add team logo
-//        let label = UILabel()
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
+    private(set) lazy var team: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     private(set) lazy var goals: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +60,7 @@ class ScorerTableViewCell: UITableViewCell, Reusable {
         contentView.addSubview(rank)
         contentView.addSubview(nationality)
         contentView.addSubview(name)
-//        contentView.addSubview(team)
+        contentView.addSubview(team)
         contentView.addSubview(goals)
     }
     
@@ -72,21 +73,23 @@ class ScorerTableViewCell: UITableViewCell, Reusable {
             rank.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -1.0 * 16.0),
         ]
         constraints += [
+            team.widthAnchor.constraint(equalToConstant: 24.0),
+            team.heightAnchor.constraint(equalToConstant: 24.0),
+            team.topAnchor.constraint(equalTo: rank.topAnchor),
+            team.leadingAnchor.constraint(equalTo: rank.trailingAnchor, constant: 24.0),
+            team.bottomAnchor.constraint(equalTo: rank.bottomAnchor),
+        ]
+        constraints += [
             nationality.topAnchor.constraint(equalTo: rank.topAnchor),
-            nationality.leadingAnchor.constraint(equalTo: rank.trailingAnchor, constant: 24.0),
+            nationality.leadingAnchor.constraint(equalTo: team.trailingAnchor, constant: 8.0),
             nationality.bottomAnchor.constraint(equalTo: rank.bottomAnchor),
         ]
         constraints += [
             name.topAnchor.constraint(equalTo: rank.topAnchor),
-            name.leadingAnchor.constraint(equalTo: nationality.trailingAnchor, constant: 16.0),
-            name.bottomAnchor.constraint(equalTo: rank.bottomAnchor),
+            name.leadingAnchor.constraint(equalTo: nationality.trailingAnchor, constant: 8.0),
         ]
-//        constraints += [ // team
-//        ]
         constraints += [
             goals.topAnchor.constraint(equalTo: rank.topAnchor),
-            goals.leadingAnchor.constraint(equalTo: name.trailingAnchor, constant: 8.0),
-            goals.bottomAnchor.constraint(equalTo: rank.bottomAnchor),
             goals.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -1.0 * 24.0),
         ]
         NSLayoutConstraint.activate(constraints)

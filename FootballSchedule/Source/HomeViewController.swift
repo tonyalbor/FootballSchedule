@@ -18,7 +18,8 @@ class HomeViewController: UITabBarController {
         schedule.title = "Schedule"
         standings.title = "Standings"
         scorers.title = "Top Scorers"
-        viewControllers = [schedule, standings, scorers]
+//        viewControllers = [schedule, standings, scorers]
+        viewControllers = [standings, schedule, scorers]
     }
 
     override func viewDidLoad() {

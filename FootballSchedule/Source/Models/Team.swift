@@ -6,31 +6,66 @@
 //  Copyright © 2019 Tony Albor. All rights reserved.
 //
 
+import UIKit
+
+enum TeamLogo: String {
+    case arsenal, bournemouth, brighton, burnley, cardiff, chelsea,
+         crystalPalace, everton, fulham, huddersfield, leicester,
+         liverpool, manchesterCity, manchesterUnited, newcastle,
+         southampton, tottenham, watford, westHam, wolverhampton
+    
+    func asUIImage() -> UIImage {
+        return UIImage(named: rawValue)!
+    }
+}
+
 struct Team: Codable, Equatable, Hashable {
     let id: Int
     let name: String
 }
 
-let eplTeams = [
-    Team(id: 57, name: "Arsenal FC"): "Arsenal",
-    Team(id: 61, name: "Chelsea FC"): "Chelsea",
-    Team(id: 62, name: "Everton FC"): "Everton",
-    Team(id: 63, name: "Fulham FC"): "Fulham",
-    Team(id: 64, name: "Liverpool FC"): "Liverpool",
-    Team(id: 65, name: "Manchester City FC"): "Man City",
-    Team(id: 66, name: "Manchester United FC"): "Man Utd",
-    Team(id: 67, name: "Newcastle United FC"): "Newcastle Utd",
-    Team(id: 73, name: "Tottenham Hotspur FC"): "Tottenham",
-    Team(id: 76, name: "Wolverhampton Wanderers FC"): "Wolves",
-    Team(id: 328, name: "Burnley FC"): "Burnley",
-    Team(id: 338, name: "Leicester City FC"): "Leicester",
-    Team(id: 340, name: "Southampton FC"): "Southampton",
-    Team(id: 346, name: "Watford FC"): "Watford",
-    Team(id: 354, name: "Crystal Palace FC"): "Crystal Palace",
-    Team(id: 394, name: "Huddersfield Town AFC"): "Huddersfield",
-    Team(id: 397, name: "Brighton & Hove Albion FC"): "Brighton & Hove Albion",
-    Team(id: 563, name: "West Ham United FC"): "West Ham",
-    Team(id: 715, name: "Cardiff City FC"): "Cardiff",
-    Team(id: 1044, name: "AFC Bournemouth"): "Bournemouth",
+let shortTeamNames = [
+    57: "Arsenal",
+    61: "Chelsea",
+    62: "Everton",
+    63: "Fulham",
+    64: "Liverpool",
+    65: "Man City",
+    66: "Man United",
+    67: "Newcastle",
+    73: "Tottenham",
+    76: "Wolves",
+    328: "Burnley",
+    338: "Leicester City",
+    340: "Southampton",
+    346: "Watford",
+    354: "Crystal Palace",
+    394: "Huddersfield",
+    397: "Brighton",
+    563: "West Ham",
+    715: "Cardiff",
+    1044: "Bournemouth",
 ]
 
+let teamLogos: [Int: TeamLogo] = [
+    57: .arsenal,
+    61: .chelsea,
+    62: .everton,
+    63: .fulham,
+    64: .liverpool,
+    65: .manchesterCity,
+    66: .manchesterUnited,
+    67: .newcastle,
+    73: .tottenham,
+    76: .wolverhampton,
+    328: .burnley,
+    338: .leicester,
+    340: .southampton,
+    346: .watford,
+    354: .crystalPalace,
+    394: .huddersfield,
+    397: .brighton,
+    563: .westHam,
+    715: .cardiff,
+    1044: .bournemouth,
+]
