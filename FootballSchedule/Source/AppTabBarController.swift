@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  AppTabBarController.swift
 //  FootballSchedule
 //
 //  Created by Tony Albor on 1/19/19.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class HomeViewController: UITabBarController {
+class AppTabBarController: UITabBarController {
+    
+    let schedule = ScheduleViewController(competitionCode: "PL", schedule: ScheduleAPI())
+    let standings = StandingsViewController(standings: StandingsAPI())
+    let scorers = ScorersViewController(scorers: ScorersAPI())
     
     override func loadView() {
         super.loadView()
-        let schedule = ScheduleViewController(competitionCode: "PL", schedule: ScheduleAPI())
-        let standings = StandingsViewController(standings: StandingsAPI())
-        let scorers = ScorersViewController(scorers: ScorersAPI())
+        
         schedule.title = "Schedule"
         standings.title = "Standings"
         scorers.title = "Top Scorers"

@@ -31,7 +31,7 @@
 		EA19D09321F3FC5700602823 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09221F3FC5700602823 /* Result.swift */; };
 		EA19D09521F3FC8A00602823 /* FootballDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09421F3FC8A00602823 /* FootballDataRequest.swift */; };
 		EA19D09721F411FB00602823 /* FootballDataAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09621F411FB00602823 /* FootballDataAuthToken.swift */; };
-		EA19D09921F4160400602823 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09821F4160400602823 /* HomeViewController.swift */; };
+		EA19D09921F4160400602823 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09821F4160400602823 /* AppTabBarController.swift */; };
 		EA19D09B21F4165400602823 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09A21F4165400602823 /* ScheduleViewController.swift */; };
 		EA19D09D21F4166F00602823 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09C21F4166F00602823 /* ScheduleView.swift */; };
 		EA19D09F21F417FC00602823 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */; };
@@ -70,7 +70,7 @@
 		EA19D09221F3FC5700602823 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA19D09421F3FC8A00602823 /* FootballDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataRequest.swift; sourceTree = "<group>"; };
 		EA19D09621F411FB00602823 /* FootballDataAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballDataAuthToken.swift; sourceTree = "<group>"; };
-		EA19D09821F4160400602823 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EA19D09821F4160400602823 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		EA19D09A21F4165400602823 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		EA19D09C21F4166F00602823 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				EA19D07A21EB2C6900602823 /* AppDelegate.swift */,
-				EA19D09821F4160400602823 /* HomeViewController.swift */,
+				EA19D09821F4160400602823 /* AppTabBarController.swift */,
 				EA19D07C21EB2C6900602823 /* ViewController.swift */,
 				EA17F92521FE7F6900A8B466 /* Models */,
 				EA19D0A421F5425C00602823 /* Schedule */,
@@ -299,7 +299,7 @@
 				EA17F92221FE785200A8B466 /* ScorersAPI.swift in Sources */,
 				EA17F92D21FE802700A8B466 /* Team.swift in Sources */,
 				EA19D0A121F41BD800602823 /* Reusable.swift in Sources */,
-				EA19D09921F4160400602823 /* HomeViewController.swift in Sources */,
+				EA19D09921F4160400602823 /* AppTabBarController.swift in Sources */,
 				EA19D09F21F417FC00602823 /* MatchTableViewCell.swift in Sources */,
 				EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */,
 				EA17F93921FE813300A8B466 /* Standings.swift in Sources */,
