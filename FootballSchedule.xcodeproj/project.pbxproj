@@ -36,6 +36,8 @@
 		EA19D09D21F4166F00602823 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09C21F4166F00602823 /* ScheduleView.swift */; };
 		EA19D09F21F417FC00602823 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */; };
 		EA19D0A121F41BD800602823 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D0A021F41BD800602823 /* Reusable.swift */; };
+		EA1DE5DE2223D59C00EC8403 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1DE5DD2223D59C00EC8403 /* Log.swift */; };
+		EA1DE5E12223D5DC00EC8403 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1DE5E02223D5DC00EC8403 /* Database.swift */; };
 		EA5A62B521F54975009CA336 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B421F54975009CA336 /* StandingsViewController.swift */; };
 		EA5A62B721F54B19009CA336 /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B621F54B19009CA336 /* StandingsView.swift */; };
 		EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */; };
@@ -75,6 +77,8 @@
 		EA19D09C21F4166F00602823 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		EA19D0A021F41BD800602823 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		EA1DE5DD2223D59C00EC8403 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		EA1DE5E02223D5DC00EC8403 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		EA5A62B421F54975009CA336 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		EA5A62B621F54B19009CA336 /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
 		EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 		EA19D0A521F5427E00602823 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EA1DE5DF2223D5C700EC8403 /* Database */,
+				EA1DE5DC2223D59100EC8403 /* Log */,
 				EA19D07A21EB2C6900602823 /* AppDelegate.swift */,
 				EA19D09821F4160400602823 /* AppTabBarController.swift */,
 				EA19D07C21EB2C6900602823 /* ViewController.swift */,
@@ -205,6 +211,22 @@
 				EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */,
 			);
 			path = Standings;
+			sourceTree = "<group>";
+		};
+		EA1DE5DC2223D59100EC8403 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				EA1DE5DD2223D59C00EC8403 /* Log.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		EA1DE5DF2223D5C700EC8403 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EA1DE5E02223D5DC00EC8403 /* Database.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +306,13 @@
 				EA5A62B521F54975009CA336 /* StandingsViewController.swift in Sources */,
 				EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */,
 				EA17F93B220183F500A8B466 /* ScorersView.swift in Sources */,
+				EA1DE5DE2223D59C00EC8403 /* Log.swift in Sources */,
 				EA17F93721FE812E00A8B466 /* Standing.swift in Sources */,
 				EA17F93321FE807000A8B466 /* MatchResult.swift in Sources */,
 				EA19D07D21EB2C6900602823 /* ViewController.swift in Sources */,
 				EA19D09721F411FB00602823 /* FootballDataAuthToken.swift in Sources */,
 				EA17F93121FE805F00A8B466 /* Score.swift in Sources */,
+				EA1DE5E12223D5DC00EC8403 /* Database.swift in Sources */,
 				EA17F92B21FE801000A8B466 /* Competition.swift in Sources */,
 				EA5A62BB21F56432009CA336 /* ScheduleAPI.swift in Sources */,
 				EA17F92F21FE804700A8B466 /* Match.swift in Sources */,
