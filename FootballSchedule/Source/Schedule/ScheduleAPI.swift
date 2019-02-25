@@ -81,12 +81,12 @@ final class ScheduleAPI {
     
     func getMatches(competitionCode code: String, matchday day: Int, completion: @escaping (Result<[Match]>) -> Void) {
         let request = Request(competitionCode: code, matchday: day)
-        api.request(request) { [weak self] result in
-            let mappedResult = result.map { $0.matches }
-            if case let .success(response) = mappedResult {
-                self?.matches = response
+        api.request(request) { [weak self] response in
+            let result = response.map { $0.matches }
+            if case let .success(value) = result {
+                self?.matches = value
             }
-            completion(mappedResult)
+            completion(result)
         }
     }
 }

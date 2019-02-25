@@ -35,13 +35,13 @@ final class ScorersAPI {
         }
         Log.verbose("Hitting Scorers API")
         let request = Request(code: competitionCode)
-        api.request(request) { [weak self] result in
-            let mappedResult = result.map { $0.scorers }
-            if case let .success(response) = mappedResult {
-                self?.scorers = response
-                self?.database.save(record: response, key: ScorersAPI.currentScorersKey)
+        api.request(request) { [weak self] response in
+            let result = response.map { $0.scorers }
+            if case let .success(value) = result {
+                self?.scorers = value
+                self?.database.save(record: value, key: ScorersAPI.currentScorersKey)
             }
-            completion(mappedResult)
+            completion(result)
         }
     }
 }

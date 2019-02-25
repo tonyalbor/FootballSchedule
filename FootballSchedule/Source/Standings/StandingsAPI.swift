@@ -32,13 +32,13 @@ final class StandingsAPI {
             return
         }
         Log.verbose("Hitting Standings API")
-        api.request(Request()) { [weak self] result in
-            let mappedResult = result.map { $0.standings.first(where: { $0.type == "TOTAL" })?.table ?? [] } // error if total not found?
-            if case let .success(standings) = mappedResult {
-                self?.table = standings
-                self?.database.save(record: standings, key: StandingsAPI.currentStandingsKey)
+        api.request(Request()) { [weak self] response in
+            let result = response.map { $0.standings.first(where: { $0.type == "TOTAL" })?.table ?? [] } // error if total not found?
+            if case let .success(value) = result {
+                self?.table = value
+                self?.database.save(record: value, key: StandingsAPI.currentStandingsKey)
             }
-            completion(mappedResult)
+            completion(result)
         }
     }
 }
