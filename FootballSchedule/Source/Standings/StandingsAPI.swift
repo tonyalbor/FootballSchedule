@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StandingsAPI {
+final class StandingsAPI {
     
     struct Request: FootballDataRequest {
         var urlString: String { return "competitions/2021/standings" }
@@ -21,19 +21,24 @@ class StandingsAPI {
     }
     
     private let api = APIClient<Response>()
+    private let database = Database<[Standing]>()
     private(set) var table = [Standing]()
+    private static let currentStandingsKey = "currentStandings"
     
     func getTable(completion: @escaping (Result<[Standing]>) -> Void) {
-        let request = Request()
-        api.request(request) { [weak self] result in
-            switch result {
-            case let .success(response):
-                let totalStandings = response.standings.first { $0.type == "TOTAL" }?.table ?? [] // error if total not found?
-                self?.table = totalStandings
-                completion(.success(totalStandings))
-            case let .failure(error):
-                completion(.failure(error))
+        if let standings = database.get(key: StandingsAPI.currentStandingsKey) {
+            table = standings
+            completion(.success(standings))
+            return
+        }
+        Log.verbose("Hitting Standings API")
+        api.request(Request()) { [weak self] result in
+            let mappedResult = result.map { $0.standings.first(where: { $0.type == "TOTAL" })?.table ?? [] } // error if total not found?
+            if case let .success(standings) = mappedResult {
+                self?.table = standings
+                self?.database.save(record: standings, key: StandingsAPI.currentStandingsKey)
             }
+            completion(mappedResult)
         }
     }
 }

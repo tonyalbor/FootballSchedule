@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ScorersAPI {
+final class ScorersAPI {
     
     struct Request: FootballDataRequest {
         let code: String
@@ -22,19 +22,26 @@ class ScorersAPI {
     }
     
     private let api = APIClient<Response>()
+    private let database = Database<[Scorer]>()
     private(set) var scorers = [Scorer]()
+    private static let currentScorersKey = "currentScorers"
     
     func getScorers(competitionCode: String,
                     completion: @escaping (Result<[Scorer]>) -> Void) {
+        if let currentScorers = database.get(key: ScorersAPI.currentScorersKey) {
+            scorers = currentScorers
+            completion(.success(currentScorers))
+            return
+        }
+        Log.verbose("Hitting Scorers API")
         let request = Request(code: competitionCode)
         api.request(request) { [weak self] result in
-            switch result {
-            case let .success(response):
-                self?.scorers = response.scorers
-                completion(.success(response.scorers))
-            case let .failure(error):
-                completion(.failure(error))
+            let mappedResult = result.map { $0.scorers }
+            if case let .success(response) = mappedResult {
+                self?.scorers = response
+                self?.database.save(record: response, key: ScorersAPI.currentScorersKey)
             }
+            completion(mappedResult)
         }
     }
 }

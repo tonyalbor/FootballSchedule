@@ -48,15 +48,31 @@ final class ScheduleAPI {
     
     private let api = APIClient<Response>()
     private let competitionAPI = CompetitionAPI()
+    private let database = Database<[Match]>()
     private(set) var matches = [Match]()
     
+    private static let currentMatchesKey = "currentMatches"
+    
     func getCurrentMatches(competitionCode: String, completion: @escaping (Result<[Match]>) -> Void) {
+        if let currentMatches = database.get(key: ScheduleAPI.currentMatchesKey) {
+            matches = currentMatches
+            // TODO: check the matches to see if they've all been played. if so, hit network instead of returning these old matches
+            completion(.success(currentMatches))
+            return
+        }
+        Log.verbose("hitting competition API for current matches")
         competitionAPI.getCompetition(code: competitionCode) { [weak self] result in
             switch result {
             case let .success(response):
-                self?.getMatches(competitionCode: competitionCode,
-                                 matchday: response.currentSeason.currentMatchday,
-                                 completion: completion)
+                self?.getMatches(
+                    competitionCode: competitionCode,
+                    matchday: response.currentSeason.currentMatchday,
+                    completion: { [weak self] result in
+                        if case let .success(matches) = result {
+                            self?.database.save(record: matches, key: ScheduleAPI.currentMatchesKey)
+                        }
+                        completion(result)
+                    })
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -66,10 +82,11 @@ final class ScheduleAPI {
     func getMatches(competitionCode code: String, matchday day: Int, completion: @escaping (Result<[Match]>) -> Void) {
         let request = Request(competitionCode: code, matchday: day)
         api.request(request) { [weak self] result in
-            if case let .success(response) = result {
-                self?.matches = response.matches
+            let mappedResult = result.map { $0.matches }
+            if case let .success(response) = mappedResult {
+                self?.matches = response
             }
-            completion(result.map { $0.matches })
+            completion(mappedResult)
         }
     }
 }
