@@ -23,21 +23,17 @@ extension Player {
         func isLowercaseASCIIScalar(_ scalar: Unicode.Scalar) -> Bool {
             return scalar.value >= 0x61 && scalar.value <= 0x7A
         }
-        
         func regionalIndicatorSymbol(for scalar: Unicode.Scalar) -> Unicode.Scalar? {
-            guard isLowercaseASCIIScalar(scalar) else { return nil }
-            
             // 0x1F1E6 marks the start of the Regional Indicator Symbol range and corresponds to 'A'
             // 0x61 marks the start of the lowercase ASCII alphabet: 'a'
             return Unicode.Scalar(scalar.value + (0x1F1E6 - 0x61))
         }
-        guard let countryCode = countryCodes[nationality] else { return nil }
-        let lowercasedCode = countryCode.lowercased()
-        guard lowercasedCode.count == 2 else { return nil }
-        guard lowercasedCode.unicodeScalars.reduce(true, { accum, scalar in accum && isLowercaseASCIIScalar(scalar) }) else { return nil }
+        guard let countryCode = countryCodes[nationality]?.lowercased() else { return nil }
+        guard countryCode.count == 2 else { return nil }
+        guard countryCode.unicodeScalars.reduce(true, { accum, scalar in accum && isLowercaseASCIIScalar(scalar) }) else { return nil }
         
-        let indicatorSymbols = lowercasedCode.unicodeScalars.compactMap({ regionalIndicatorSymbol(for: $0) })
-        return String(indicatorSymbols.map({ Character($0) }))
+        let indicatorSymbols = countryCode.unicodeScalars.compactMap(regionalIndicatorSymbol)
+        return String(indicatorSymbols.map(Character.init))
     }
 }
 

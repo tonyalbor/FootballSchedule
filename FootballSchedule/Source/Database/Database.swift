@@ -10,9 +10,9 @@ import Foundation
 
 final class Database<Record: Codable> {
     
-    let encoder = JSONEncoder()
-    let decoder = JSONDecoder()
-    let defaults = UserDefaults.standard
+    private let encoder = JSONEncoder()
+    private let decoder = JSONDecoder()
+    private let defaults = UserDefaults.standard
     
     func save(record: Record, key: String) {
         do {
@@ -34,7 +34,7 @@ final class Database<Record: Codable> {
             return record
         } catch let error {
             Log.warning("Database read error for type (\(String(describing: Record.self)))", error: error)
+            return nil
         }
-        return nil
     }
 }
