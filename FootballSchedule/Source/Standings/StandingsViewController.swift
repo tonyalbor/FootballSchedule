@@ -37,7 +37,7 @@ class StandingsViewController: UIViewController {
     private func setUpStandings() {
         contentView.standings.dataSource = self
         contentView.standings.delegate = self
-        contentView.standings.estimatedRowHeight = 44.0
+        contentView.standings.estimatedRowHeight = 88.0
     }
     
     private func getStandings() {
@@ -68,8 +68,19 @@ extension StandingsViewController: UITableViewDataSource {
 }
 
 extension StandingsViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if tableView.indexPathForSelectedRow == indexPath {
+            tableView.deselectRow(at: indexPath, animated: true)
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            return nil
+        }
+        return indexPath
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let standing = standings.table[indexPath.row]
-        print(standing.team.name + " " + (standing.team.id.stringValue ?? "nil"))
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
