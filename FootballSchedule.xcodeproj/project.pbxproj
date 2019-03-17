@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA144624223E40ED009AD76E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA144622223E40ED009AD76E /* Interface.storyboard */; };
+		EA144626223E40EE009AD76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA144625223E40EE009AD76E /* Assets.xcassets */; };
+		EA14462D223E40EE009AD76E /* FootballScheduleWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA14462C223E40EE009AD76E /* FootballScheduleWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA144632223E40EE009AD76E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144631223E40EE009AD76E /* InterfaceController.swift */; };
+		EA144634223E40EE009AD76E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144633223E40EE009AD76E /* ExtensionDelegate.swift */; };
+		EA144636223E40EE009AD76E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144635223E40EE009AD76E /* NotificationController.swift */; };
+		EA144638223E40EE009AD76E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144637223E40EE009AD76E /* ComplicationController.swift */; };
+		EA14463A223E40EE009AD76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA144639223E40EE009AD76E /* Assets.xcassets */; };
+		EA14463F223E40EE009AD76E /* FootballScheduleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EA144620223E40ED009AD76E /* FootballScheduleWatch.app */; };
+		EA144649223E48CF009AD76E /* StandingRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144648223E48CF009AD76E /* StandingRowController.swift */; };
+		EA14464B223E4C01009AD76E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1DE5E02223D5DC00EC8403 /* Database.swift */; };
+		EA14464C223E4C01009AD76E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1DE5DD2223D59C00EC8403 /* Log.swift */; };
+		EA14464D223E4C01009AD76E /* Competition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92A21FE801000A8B466 /* Competition.swift */; };
+		EA14464E223E4C01009AD76E /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92E21FE804700A8B466 /* Match.swift */; };
+		EA14464F223E4C01009AD76E /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93221FE807000A8B466 /* MatchResult.swift */; };
+		EA144650223E4C01009AD76E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92621FE7F9800A8B466 /* Player.swift */; };
+		EA144651223E4C01009AD76E /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93021FE805F00A8B466 /* Score.swift */; };
+		EA144652223E4C01009AD76E /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92821FE7FB200A8B466 /* Scorer.swift */; };
+		EA144653223E4C01009AD76E /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93421FE811A00A8B466 /* Season.swift */; };
+		EA144654223E4C01009AD76E /* Standing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93621FE812E00A8B466 /* Standing.swift */; };
+		EA144655223E4C01009AD76E /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93821FE813300A8B466 /* Standings.swift */; };
+		EA144656223E4C01009AD76E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92C21FE802700A8B466 /* Team.swift */; };
+		EA144657223E4C01009AD76E /* ScheduleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */; };
+		EA144658223E4C01009AD76E /* ScorersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92121FE785200A8B466 /* ScorersAPI.swift */; };
+		EA144659223E4C01009AD76E /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */; };
+		EA14465A223E4C01009AD76E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D08C21EB2C7B00602823 /* APIClient.swift */; };
+		EA14465B223E4C01009AD76E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09221F3FC5700602823 /* Result.swift */; };
+		EA14465C223E4C01009AD76E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09021F3FC3B00602823 /* APIRequest.swift */; };
+		EA14465D223E4C01009AD76E /* FootballDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09421F3FC8A00602823 /* FootballDataRequest.swift */; };
+		EA14465E223E4C01009AD76E /* FootballDataAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09621F411FB00602823 /* FootballDataAuthToken.swift */; };
 		EA17F92221FE785200A8B466 /* ScorersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92121FE785200A8B466 /* ScorersAPI.swift */; };
 		EA17F92421FE7D9800A8B466 /* ScorersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92321FE7D9800A8B466 /* ScorersViewController.swift */; };
 		EA17F92721FE7F9800A8B466 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92621FE7F9800A8B466 /* Player.swift */; };
@@ -45,7 +75,62 @@
 		EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA14462E223E40EE009AD76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA19D06F21EB2C6900602823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA14462B223E40EE009AD76E;
+			remoteInfo = "FootballScheduleWatch Extension";
+		};
+		EA14463D223E40EE009AD76E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA19D06F21EB2C6900602823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA14461F223E40ED009AD76E;
+			remoteInfo = FootballScheduleWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA144643223E40EF009AD76E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA14462D223E40EE009AD76E /* FootballScheduleWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA144647223E40EF009AD76E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EA14463F223E40EE009AD76E /* FootballScheduleWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EA144620223E40ED009AD76E /* FootballScheduleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballScheduleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA144623223E40ED009AD76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EA144625223E40EE009AD76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA144627223E40EE009AD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA14462C223E40EE009AD76E /* FootballScheduleWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FootballScheduleWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA144631223E40EE009AD76E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EA144633223E40EE009AD76E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EA144635223E40EE009AD76E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		EA144637223E40EE009AD76E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		EA144639223E40EE009AD76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA14463B223E40EE009AD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA14463C223E40EE009AD76E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EA144648223E48CF009AD76E /* StandingRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingRowController.swift; sourceTree = "<group>"; };
 		EA17F92121FE785200A8B466 /* ScorersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorersAPI.swift; sourceTree = "<group>"; };
 		EA17F92321FE7D9800A8B466 /* ScorersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorersViewController.swift; sourceTree = "<group>"; };
 		EA17F92621FE7F9800A8B466 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -87,6 +172,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA144629223E40EE009AD76E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA19D07421EB2C6900602823 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +189,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA144621223E40ED009AD76E /* FootballScheduleWatch */ = {
+			isa = PBXGroup;
+			children = (
+				EA144622223E40ED009AD76E /* Interface.storyboard */,
+				EA144625223E40EE009AD76E /* Assets.xcassets */,
+				EA144627223E40EE009AD76E /* Info.plist */,
+			);
+			path = FootballScheduleWatch;
+			sourceTree = "<group>";
+		};
+		EA144630223E40EE009AD76E /* FootballScheduleWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA144631223E40EE009AD76E /* InterfaceController.swift */,
+				EA144648223E48CF009AD76E /* StandingRowController.swift */,
+				EA144633223E40EE009AD76E /* ExtensionDelegate.swift */,
+				EA144635223E40EE009AD76E /* NotificationController.swift */,
+				EA144637223E40EE009AD76E /* ComplicationController.swift */,
+				EA144639223E40EE009AD76E /* Assets.xcassets */,
+				EA14463B223E40EE009AD76E /* Info.plist */,
+				EA14463C223E40EE009AD76E /* PushNotificationPayload.apns */,
+			);
+			path = "FootballScheduleWatch Extension";
+			sourceTree = "<group>";
+		};
 		EA17F92021FE747900A8B466 /* Scorers */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				EA19D07921EB2C6900602823 /* FootballSchedule */,
+				EA144621223E40ED009AD76E /* FootballScheduleWatch */,
+				EA144630223E40EE009AD76E /* FootballScheduleWatch Extension */,
 				EA19D07821EB2C6900602823 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				EA19D07721EB2C6900602823 /* FootballSchedule.app */,
+				EA144620223E40ED009AD76E /* FootballScheduleWatch.app */,
+				EA14462C223E40EE009AD76E /* FootballScheduleWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +353,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA14461F223E40ED009AD76E /* FootballScheduleWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA144644223E40EF009AD76E /* Build configuration list for PBXNativeTarget "FootballScheduleWatch" */;
+			buildPhases = (
+				EA14461E223E40ED009AD76E /* Resources */,
+				EA144643223E40EF009AD76E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA14462F223E40EE009AD76E /* PBXTargetDependency */,
+			);
+			name = FootballScheduleWatch;
+			productName = FootballScheduleWatch;
+			productReference = EA144620223E40ED009AD76E /* FootballScheduleWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EA14462B223E40EE009AD76E /* FootballScheduleWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA144640223E40EF009AD76E /* Build configuration list for PBXNativeTarget "FootballScheduleWatch Extension" */;
+			buildPhases = (
+				EA144628223E40EE009AD76E /* Sources */,
+				EA144629223E40EE009AD76E /* Frameworks */,
+				EA14462A223E40EE009AD76E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FootballScheduleWatch Extension";
+			productName = "FootballScheduleWatch Extension";
+			productReference = EA14462C223E40EE009AD76E /* FootballScheduleWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		EA19D07621EB2C6900602823 /* FootballSchedule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA19D08921EB2C6D00602823 /* Build configuration list for PBXNativeTarget "FootballSchedule" */;
@@ -239,10 +394,12 @@
 				EA19D07321EB2C6900602823 /* Sources */,
 				EA19D07421EB2C6900602823 /* Frameworks */,
 				EA19D07521EB2C6900602823 /* Resources */,
+				EA144647223E40EF009AD76E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EA14463E223E40EE009AD76E /* PBXTargetDependency */,
 			);
 			name = FootballSchedule;
 			productName = "Football Schedule";
@@ -259,6 +416,12 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Tony Albor";
 				TargetAttributes = {
+					EA14461F223E40ED009AD76E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EA14462B223E40EE009AD76E = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					EA19D07621EB2C6900602823 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -278,11 +441,30 @@
 			projectRoot = "";
 			targets = (
 				EA19D07621EB2C6900602823 /* FootballSchedule */,
+				EA14461F223E40ED009AD76E /* FootballScheduleWatch */,
+				EA14462B223E40EE009AD76E /* FootballScheduleWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA14461E223E40ED009AD76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA144626223E40EE009AD76E /* Assets.xcassets in Resources */,
+				EA144624223E40ED009AD76E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA14462A223E40EE009AD76E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA14463A223E40EE009AD76E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA19D07521EB2C6900602823 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +478,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA144628223E40EE009AD76E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA14464B223E4C01009AD76E /* Database.swift in Sources */,
+				EA14464C223E4C01009AD76E /* Log.swift in Sources */,
+				EA14464D223E4C01009AD76E /* Competition.swift in Sources */,
+				EA14464E223E4C01009AD76E /* Match.swift in Sources */,
+				EA14464F223E4C01009AD76E /* MatchResult.swift in Sources */,
+				EA144650223E4C01009AD76E /* Player.swift in Sources */,
+				EA144651223E4C01009AD76E /* Score.swift in Sources */,
+				EA144652223E4C01009AD76E /* Scorer.swift in Sources */,
+				EA144653223E4C01009AD76E /* Season.swift in Sources */,
+				EA144654223E4C01009AD76E /* Standing.swift in Sources */,
+				EA144655223E4C01009AD76E /* Standings.swift in Sources */,
+				EA144656223E4C01009AD76E /* Team.swift in Sources */,
+				EA144657223E4C01009AD76E /* ScheduleAPI.swift in Sources */,
+				EA144658223E4C01009AD76E /* ScorersAPI.swift in Sources */,
+				EA144659223E4C01009AD76E /* StandingsAPI.swift in Sources */,
+				EA14465A223E4C01009AD76E /* APIClient.swift in Sources */,
+				EA14465B223E4C01009AD76E /* Result.swift in Sources */,
+				EA14465C223E4C01009AD76E /* APIRequest.swift in Sources */,
+				EA14465D223E4C01009AD76E /* FootballDataRequest.swift in Sources */,
+				EA14465E223E4C01009AD76E /* FootballDataAuthToken.swift in Sources */,
+				EA144636223E40EE009AD76E /* NotificationController.swift in Sources */,
+				EA144638223E40EE009AD76E /* ComplicationController.swift in Sources */,
+				EA144634223E40EE009AD76E /* ExtensionDelegate.swift in Sources */,
+				EA144649223E48CF009AD76E /* StandingRowController.swift in Sources */,
+				EA144632223E40EE009AD76E /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA19D07321EB2C6900602823 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,7 +552,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EA14462F223E40EE009AD76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA14462B223E40EE009AD76E /* FootballScheduleWatch Extension */;
+			targetProxy = EA14462E223E40EE009AD76E /* PBXContainerItemProxy */;
+		};
+		EA14463E223E40EE009AD76E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA14461F223E40ED009AD76E /* FootballScheduleWatch */;
+			targetProxy = EA14463D223E40EE009AD76E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		EA144622223E40ED009AD76E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA144623223E40ED009AD76E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		EA19D07E21EB2C6900602823 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,6 +593,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA144641223E40EF009AD76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 998B9U96MF;
+				INFOPLIST_FILE = "FootballScheduleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyalbor.Football-Schedule.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		EA144642223E40EF009AD76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 998B9U96MF;
+				INFOPLIST_FILE = "FootballScheduleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyalbor.Football-Schedule.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		EA144645223E40EF009AD76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 998B9U96MF;
+				IBSC_MODULE = FootballScheduleWatch_Extension;
+				INFOPLIST_FILE = FootballScheduleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyalbor.Football-Schedule.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		EA144646223E40EF009AD76E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 998B9U96MF;
+				IBSC_MODULE = FootballScheduleWatch_Extension;
+				INFOPLIST_FILE = FootballScheduleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyalbor.Football-Schedule.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 		EA19D08721EB2C6D00602823 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -513,6 +830,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA144640223E40EF009AD76E /* Build configuration list for PBXNativeTarget "FootballScheduleWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA144641223E40EF009AD76E /* Debug */,
+				EA144642223E40EF009AD76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA144644223E40EF009AD76E /* Build configuration list for PBXNativeTarget "FootballScheduleWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA144645223E40EF009AD76E /* Debug */,
+				EA144646223E40EF009AD76E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA19D07221EB2C6900602823 /* Build configuration list for PBXProject "FootballSchedule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
