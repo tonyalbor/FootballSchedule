@@ -21,7 +21,7 @@ class MatchTableViewCell: UITableViewCell, Reusable {
     private func update(match newValue: Match?) {
         if let homeTeam = newValue?.homeTeam {
             homeLogo.image = teamLogos[homeTeam.id]?.asUIImage()
-            homeName.text = shortTeamNames[homeTeam.id]
+            homeName.text = shortTeamNames[homeTeam.id] ?? homeTeam.name
         } else {
             homeLogo.image = nil
             homeName.text = nil
@@ -29,7 +29,7 @@ class MatchTableViewCell: UITableViewCell, Reusable {
         homeScore.text = newValue?.score.fullTime?.homeTeam?.stringValue // todo: if game is not done yet, use different score
         if let awayTeam = newValue?.awayTeam {
             awayLogo.image = teamLogos[awayTeam.id]?.asUIImage()
-            awayName.text = shortTeamNames[awayTeam.id]
+            awayName.text = shortTeamNames[awayTeam.id] ?? awayTeam.name
         } else {
             awayLogo.image = nil
             homeName.text = nil
