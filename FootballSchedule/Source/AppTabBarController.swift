@@ -14,14 +14,15 @@ class AppTabBarController: UITabBarController {
     let standings = StandingsViewController(standings: StandingsAPI())
     let scorers = ScorersViewController(scorers: ScorersAPI())
     let team = TeamScheduleViewController(teamId: 65, schedule: TeamScheduleAPI())
+    let admin = AdminViewController()
     
     override func loadView() {
         super.loadView()
-        
-        schedule.title = "Schedule"
-        standings.title = "Standings"
-        scorers.title = "Top Scorers"
-        team.title = "Man City"
-        viewControllers = [schedule, standings, scorers, team]
+        viewControllers = [schedule, standings, scorers, team, admin]
+        schedule.tabBarItem.title = "Schedule"
+        standings.tabBarItem.title = "Standings"
+        scorers.tabBarItem.title = "Top Scorers"
+        team.tabBarItem.title = "Man City"
+        admin.tabBarItem.title = "Admin"
     }
 }

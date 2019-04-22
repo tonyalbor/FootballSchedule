@@ -37,4 +37,8 @@ final class Database<Record: Codable> {
             return nil
         }
     }
+
+    func delete(key: String) {
+        defaults.removeObject(forKey: key)
+    }
 }

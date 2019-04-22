@@ -55,7 +55,6 @@
 		EA17F93B220183F500A8B466 /* ScorersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93A220183F500A8B466 /* ScorersView.swift */; };
 		EA17F93D220184DF00A8B466 /* ScorerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F93C220184DF00A8B466 /* ScorerTableViewCell.swift */; };
 		EA19D07B21EB2C6900602823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D07A21EB2C6900602823 /* AppDelegate.swift */; };
-		EA19D07D21EB2C6900602823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D07C21EB2C6900602823 /* ViewController.swift */; };
 		EA19D08021EB2C6900602823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA19D07E21EB2C6900602823 /* Main.storyboard */; };
 		EA19D08221EB2C6D00602823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA19D08121EB2C6D00602823 /* Assets.xcassets */; };
 		EA19D08521EB2C6D00602823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA19D08321EB2C6D00602823 /* LaunchScreen.storyboard */; };
@@ -76,6 +75,8 @@
 		EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */; };
 		EA5A62BB21F56432009CA336 /* ScheduleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */; };
 		EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */; };
+		EA9FE75C226D89C400773D7B /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FE75B226D89C400773D7B /* AdminView.swift */; };
+		EA9FE75E226D8C0700773D7B /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FE75D226D8C0700773D7B /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,7 +153,6 @@
 		EA17F93C220184DF00A8B466 /* ScorerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTableViewCell.swift; sourceTree = "<group>"; };
 		EA19D07721EB2C6900602823 /* FootballSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA19D07A21EB2C6900602823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA19D07C21EB2C6900602823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA19D07F21EB2C6900602823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA19D08121EB2C6D00602823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA19D08421EB2C6D00602823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,6 +174,8 @@
 		EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTableViewCell.swift; sourceTree = "<group>"; };
 		EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPI.swift; sourceTree = "<group>"; };
 		EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsAPI.swift; sourceTree = "<group>"; };
+		EA9FE75B226D89C400773D7B /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		EA9FE75D226D8C0700773D7B /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,11 +317,11 @@
 		EA19D0A521F5427E00602823 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EA1DE5DF2223D5C700EC8403 /* Database */,
-				EA1DE5DC2223D59100EC8403 /* Log */,
 				EA19D07A21EB2C6900602823 /* AppDelegate.swift */,
 				EA19D09821F4160400602823 /* AppTabBarController.swift */,
-				EA19D07C21EB2C6900602823 /* ViewController.swift */,
+				EA9FE75A226D898E00773D7B /* Admin */,
+				EA1DE5DF2223D5C700EC8403 /* Database */,
+				EA1DE5DC2223D59100EC8403 /* Log */,
 				EA17F92521FE7F6900A8B466 /* Models */,
 				EA19D0A421F5425C00602823 /* Schedule */,
 				EA17F92021FE747900A8B466 /* Scorers */,
@@ -355,6 +357,15 @@
 				EA1DE5E02223D5DC00EC8403 /* Database.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		EA9FE75A226D898E00773D7B /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				EA9FE75B226D89C400773D7B /* AdminView.swift */,
+				EA9FE75D226D8C0700773D7B /* AdminViewController.swift */,
+			);
+			path = Admin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9FE75E226D8C0700773D7B /* AdminViewController.swift in Sources */,
 				EA17F93D220184DF00A8B466 /* ScorerTableViewCell.swift in Sources */,
 				EA17F92721FE7F9800A8B466 /* Player.swift in Sources */,
 				EA19D09321F3FC5700602823 /* Result.swift in Sources */,
@@ -531,7 +543,6 @@
 				EA1DE5DE2223D59C00EC8403 /* Log.swift in Sources */,
 				EA17F93721FE812E00A8B466 /* Standing.swift in Sources */,
 				EA17F93321FE807000A8B466 /* MatchResult.swift in Sources */,
-				EA19D07D21EB2C6900602823 /* ViewController.swift in Sources */,
 				EA19D09721F411FB00602823 /* FootballDataAuthToken.swift in Sources */,
 				EA17F93121FE805F00A8B466 /* Score.swift in Sources */,
 				EA1DE5E12223D5DC00EC8403 /* Database.swift in Sources */,
@@ -552,6 +563,7 @@
 				EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */,
 				EA17F93921FE813300A8B466 /* Standings.swift in Sources */,
 				EA17F92421FE7D9800A8B466 /* ScorersViewController.swift in Sources */,
+				EA9FE75C226D89C400773D7B /* AdminView.swift in Sources */,
 				EA19D08D21EB2C7B00602823 /* APIClient.swift in Sources */,
 				EA19D09121F3FC3B00602823 /* APIRequest.swift in Sources */,
 				EA19D09D21F4166F00602823 /* ScheduleView.swift in Sources */,
