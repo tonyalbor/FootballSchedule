@@ -37,6 +37,9 @@
 		EA14465C223E4C01009AD76E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09021F3FC3B00602823 /* APIRequest.swift */; };
 		EA14465D223E4C01009AD76E /* FootballDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09421F3FC8A00602823 /* FootballDataRequest.swift */; };
 		EA14465E223E4C01009AD76E /* FootballDataAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19D09621F411FB00602823 /* FootballDataAuthToken.swift */; };
+		EA144660223EF45B009AD76E /* TeamScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14465F223EF45B009AD76E /* TeamScheduleViewController.swift */; };
+		EA144662223F79CD009AD76E /* TeamScheduleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144661223F79CD009AD76E /* TeamScheduleAPI.swift */; };
+		EA144663223F79CD009AD76E /* TeamScheduleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA144661223F79CD009AD76E /* TeamScheduleAPI.swift */; };
 		EA17F92221FE785200A8B466 /* ScorersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92121FE785200A8B466 /* ScorersAPI.swift */; };
 		EA17F92421FE7D9800A8B466 /* ScorersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92321FE7D9800A8B466 /* ScorersViewController.swift */; };
 		EA17F92721FE7F9800A8B466 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17F92621FE7F9800A8B466 /* Player.swift */; };
@@ -131,6 +134,8 @@
 		EA14463B223E40EE009AD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA14463C223E40EE009AD76E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		EA144648223E48CF009AD76E /* StandingRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingRowController.swift; sourceTree = "<group>"; };
+		EA14465F223EF45B009AD76E /* TeamScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScheduleViewController.swift; sourceTree = "<group>"; };
+		EA144661223F79CD009AD76E /* TeamScheduleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScheduleAPI.swift; sourceTree = "<group>"; };
 		EA17F92121FE785200A8B466 /* ScorersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorersAPI.swift; sourceTree = "<group>"; };
 		EA17F92321FE7D9800A8B466 /* ScorersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorersViewController.swift; sourceTree = "<group>"; };
 		EA17F92621FE7F9800A8B466 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -300,6 +305,8 @@
 				EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */,
 				EA19D09C21F4166F00602823 /* ScheduleView.swift */,
 				EA19D09A21F4165400602823 /* ScheduleViewController.swift */,
+				EA144661223F79CD009AD76E /* TeamScheduleAPI.swift */,
+				EA14465F223EF45B009AD76E /* TeamScheduleViewController.swift */,
 				EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */,
 			);
 			path = Schedule;
@@ -484,6 +491,7 @@
 			files = (
 				EA14464B223E4C01009AD76E /* Database.swift in Sources */,
 				EA14464C223E4C01009AD76E /* Log.swift in Sources */,
+				EA144663223F79CD009AD76E /* TeamScheduleAPI.swift in Sources */,
 				EA14464D223E4C01009AD76E /* Competition.swift in Sources */,
 				EA14464E223E4C01009AD76E /* Match.swift in Sources */,
 				EA14464F223E4C01009AD76E /* MatchResult.swift in Sources */,
@@ -536,6 +544,8 @@
 				EA19D09B21F4165400602823 /* ScheduleViewController.swift in Sources */,
 				EA17F92221FE785200A8B466 /* ScorersAPI.swift in Sources */,
 				EA17F92D21FE802700A8B466 /* Team.swift in Sources */,
+				EA144662223F79CD009AD76E /* TeamScheduleAPI.swift in Sources */,
+				EA144660223EF45B009AD76E /* TeamScheduleViewController.swift in Sources */,
 				EA19D0A121F41BD800602823 /* Reusable.swift in Sources */,
 				EA19D09921F4160400602823 /* AppTabBarController.swift in Sources */,
 				EA19D09F21F417FC00602823 /* MatchTableViewCell.swift in Sources */,
