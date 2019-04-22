@@ -10,19 +10,19 @@ import UIKit
 
 enum Log {
     static func debug(_ message: String) {
-        print("Debug: \(message)")
+        print("Debug 🐛: \(message)")
     }
     static func verbose(_ message: String) {
-        print("Verbose: \(message)")
+        print("Verbose 💬: \(message)")
     }
     static func warning(_ message: String, error: Error? = nil) {
-        print("Warning: \(message)")
+        print("Warning ⚠️: \(message)")
         if let error = error {
             print(error)
         }
     }
     static func error(_ message: String, error: Error? = nil) {
-        print("Error: \(message)")
+        print("Error ⛔️: \(message)")
         if let error = error {
             print(error)
         }
