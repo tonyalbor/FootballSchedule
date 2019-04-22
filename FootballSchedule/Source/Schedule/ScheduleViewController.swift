@@ -12,6 +12,7 @@ class ScheduleViewController: UIViewController {
     
     private let competitionCode: String
     private let schedule: ScheduleAPI
+    private var matches = [Match]()
     
     init(competitionCode: String, schedule: ScheduleAPI) {
         self.competitionCode = competitionCode
@@ -45,14 +46,19 @@ class ScheduleViewController: UIViewController {
     private func getSchedule() {
         schedule.getCurrentMatches(competitionCode: competitionCode) { [weak self] result in
             DispatchQueue.main.async { [weak self] in
-                switch result {
-                case .success:
-                    self?.contentView.matches.reloadData()
-                case let .failure(error):
-                    print(error.localizedDescription)
-                    print(error)
-                }
+                self?.handleScheduleResponse(result)
             }
+        }
+    }
+
+    private func handleScheduleResponse(_ result: Result<[Match]>) {
+        switch result {
+        case let .success(value):
+            matches.append(contentsOf: value)
+            contentView.matches.reloadData()
+        case let .failure(error):
+            print(error.localizedDescription)
+            print(error)
         }
     }
 }
@@ -60,12 +66,12 @@ class ScheduleViewController: UIViewController {
 extension ScheduleViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return schedule.matches.count
+        return matches.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MatchTableViewCell.self)
-        cell.match = schedule.matches[indexPath.row]
+        cell.match = matches[indexPath.row]
         return cell
     }
 }

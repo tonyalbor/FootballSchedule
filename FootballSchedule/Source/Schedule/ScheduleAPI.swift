@@ -50,7 +50,6 @@ final class ScheduleAPI {
     private let competitionAPI = CompetitionAPI()
     private let matchesDatabase = Database<[Match]>()
     private let seasonDatabase = Database<Season>()
-    private(set) var matches = [Match]()
     
     private static let currentMatchesKey = "currentMatches"
     
@@ -87,7 +86,6 @@ final class ScheduleAPI {
         if let currentSeason = seasonDatabase.get(key: currentSeasonKey) {
             let currentMatchesKey = matchesKey(competitionCode: competitionCode, matchday: currentSeason.currentMatchday)
             if let currentMatches = matchesDatabase.get(key: currentMatchesKey) {
-                matches = currentMatches
                 completion(.success(currentMatches))
                 return
             }
@@ -121,7 +119,6 @@ final class ScheduleAPI {
         api.request(request) { [weak self] response in
             let result = response.map { $0.matches }
             if case let .success(value) = result {
-                self?.matches = value
                 self?.matchesDatabase.save(record: value, key: key)
             }
             completion(result)
