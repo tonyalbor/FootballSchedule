@@ -13,6 +13,7 @@ class AppTabBarController: UITabBarController {
     let schedule = ScheduleViewController(competitionCode: "PL", schedule: ScheduleAPI())
     let standings = StandingsViewController(standings: StandingsAPI())
     let scorers = ScorersViewController(scorers: ScorersAPI())
+    let team = TeamScheduleViewController(teamId: 65, schedule: TeamScheduleAPI())
     
     override func loadView() {
         super.loadView()
@@ -20,11 +21,7 @@ class AppTabBarController: UITabBarController {
         schedule.title = "Schedule"
         standings.title = "Standings"
         scorers.title = "Top Scorers"
-        viewControllers = [schedule, standings, scorers]
-//        viewControllers = [standings, schedule, scorers]
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        team.title = "Man City"
+        viewControllers = [schedule, standings, scorers, team]
     }
 }
