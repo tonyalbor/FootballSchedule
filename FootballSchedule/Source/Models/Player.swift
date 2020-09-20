@@ -20,6 +20,9 @@ extension Player {
     // EmojiFlags
     // https://timekl.com/blog/2017/08/31/emoji-flags-with-swift/
     func emojiNationalityFlag() -> String? {
+        if [nationality, countryOfBirth].contains("Wales") {
+            return "🏴󠁧󠁢󠁷󠁬󠁳󠁿"
+        }
         func isLowercaseASCIIScalar(_ scalar: Unicode.Scalar) -> Bool {
             return scalar.value >= 0x61 && scalar.value <= 0x7A
         }
@@ -28,10 +31,10 @@ extension Player {
             // 0x61 marks the start of the lowercase ASCII alphabet: 'a'
             return Unicode.Scalar(scalar.value + (0x1F1E6 - 0x61))
         }
-        guard let countryCode = countryCodes[nationality]?.lowercased() else { return nil }
+        guard let countryCode = (countryCodes[nationality] ?? countryCodes[countryOfBirth])?.lowercased() else { return nil }
         guard countryCode.count == 2 else { return nil }
         guard countryCode.unicodeScalars.reduce(true, { accum, scalar in accum && isLowercaseASCIIScalar(scalar) }) else { return nil }
-        
+
         let indicatorSymbols = countryCode.unicodeScalars.compactMap(regionalIndicatorSymbol)
         return String(indicatorSymbols.map(Character.init))
     }
@@ -83,7 +86,7 @@ private let countryCodes = [
     "Central African Republic": "CF",
     "Congo - Brazzaville": "CG",
     "Switzerland": "CH",
-    "Côte d'Ivoire": "CI",
+    "Côte d’Ivoire": "CI",
     "Cook Islands": "CK",
     "Chile": "CL",
     "Cameroon": "CM",

@@ -12,7 +12,6 @@ class ScheduleView: UIView {
     
     private(set) lazy var matches: UITableView = {
         let tableView = UITableView()
-        tableView.register(MatchTableViewCell.self)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -34,7 +33,7 @@ class ScheduleView: UIView {
     private func setUpConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints += [
-            matches.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            matches.topAnchor.constraint(equalTo: topAnchor),
             matches.leadingAnchor.constraint(equalTo: leadingAnchor),
             matches.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
             matches.trailingAnchor.constraint(equalTo: trailingAnchor),

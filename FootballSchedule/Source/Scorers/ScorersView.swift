@@ -34,7 +34,7 @@ class ScorersView: UIView {
     private func setUpConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints += [
-            scorers.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            scorers.topAnchor.constraint(equalTo: topAnchor),
             scorers.leadingAnchor.constraint(equalTo: leadingAnchor),
             scorers.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
             scorers.trailingAnchor.constraint(equalTo: trailingAnchor),

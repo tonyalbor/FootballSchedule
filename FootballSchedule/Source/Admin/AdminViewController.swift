@@ -59,6 +59,7 @@ class AdminViewController: UIViewController {
     // TODO: move all these keys elsewhere
     private func deleteScheduleData() {
         Database<Season>().delete(key: "currentSeason:PL")
+        Database<Season>().delete(key: "matches:PL:2") // TODO: delete current match day
     }
     private func deleteStandingsData() {
         Database<[Standing]>().delete(key: "currentStandings")

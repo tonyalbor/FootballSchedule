@@ -20,11 +20,11 @@ extension Reusable {
 
 extension UITableView {
 
-    func register<Cell: UITableViewCell>(_: Cell.Type) where Cell: Reusable {
-        register(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
+    func register<Cell: UITableViewCell>(_ cellType: Cell.Type) where Cell: Reusable {
+        register(cellType, forCellReuseIdentifier: cellType.reuseIdentifier)
     }
 
-    func dequeueReusableCell<Cell: UITableViewCell>(_: Cell.Type) -> Cell where Cell: Reusable {
-        return dequeueReusableCell(withIdentifier: Cell.reuseIdentifier) as! Cell
+    func dequeueReusableCell<Cell: UITableViewCell>(_ cellType: Cell.Type) -> Cell where Cell: Reusable {
+        return dequeueReusableCell(withIdentifier: cellType.reuseIdentifier) as! Cell
     }
 }

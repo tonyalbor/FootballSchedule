@@ -75,6 +75,7 @@
 		EA5A62B921F54CC4009CA336 /* StandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */; };
 		EA5A62BB21F56432009CA336 /* ScheduleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */; };
 		EA5A62BD21F5644D009CA336 /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */; };
+		EA9E0D5F2517F22400C6633F /* MatchTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E0D5E2517F22400C6633F /* MatchTableViewCell2.swift */; };
 		EA9FE75C226D89C400773D7B /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FE75B226D89C400773D7B /* AdminView.swift */; };
 		EA9FE75E226D8C0700773D7B /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FE75D226D8C0700773D7B /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
@@ -174,6 +175,7 @@
 		EA5A62B821F54CC4009CA336 /* StandingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingTableViewCell.swift; sourceTree = "<group>"; };
 		EA5A62BA21F56432009CA336 /* ScheduleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPI.swift; sourceTree = "<group>"; };
 		EA5A62BC21F5644D009CA336 /* StandingsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsAPI.swift; sourceTree = "<group>"; };
+		EA9E0D5E2517F22400C6633F /* MatchTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell2.swift; sourceTree = "<group>"; };
 		EA9FE75B226D89C400773D7B /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		EA9FE75D226D8C0700773D7B /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +312,7 @@
 				EA144661223F79CD009AD76E /* TeamScheduleAPI.swift */,
 				EA14465F223EF45B009AD76E /* TeamScheduleViewController.swift */,
 				EA19D09E21F417FC00602823 /* MatchTableViewCell.swift */,
+				EA9E0D5E2517F22400C6633F /* MatchTableViewCell2.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9FE75E226D8C0700773D7B /* AdminViewController.swift in Sources */,
+				EA9E0D5F2517F22400C6633F /* MatchTableViewCell2.swift in Sources */,
 				EA17F93D220184DF00A8B466 /* ScorerTableViewCell.swift in Sources */,
 				EA17F92721FE7F9800A8B466 /* Player.swift in Sources */,
 				EA19D09321F3FC5700602823 /* Result.swift in Sources */,
@@ -820,6 +824,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 998B9U96MF;
 				INFOPLIST_FILE = "$(SRCROOT)/FootballSchedule/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -838,6 +843,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 998B9U96MF;
 				INFOPLIST_FILE = "$(SRCROOT)/FootballSchedule/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

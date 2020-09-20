@@ -11,8 +11,16 @@ struct Match: Codable, Equatable, Hashable {
     let homeTeam: Team
     let awayTeam: Team
     let score: Score
-//    let date: Date // TODO
+    let date: String // TODO: make this a Date (probably need to set date formatter in JSON Decoder)
     let status: String
 //    let lastUpdated: Date // TODO
 //    let matchDay: String
+    enum CodingKeys: String, CodingKey {
+        case id
+        case homeTeam
+        case awayTeam
+        case score
+        case status
+        case date = "utcDate"
+    }
 }

@@ -34,7 +34,7 @@ class StandingsView: UIView {
     private func setUpConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints += [
-            standings.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            standings.topAnchor.constraint(equalTo: topAnchor),
             standings.leadingAnchor.constraint(equalTo: leadingAnchor),
             standings.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
             standings.trailingAnchor.constraint(equalTo: trailingAnchor),
